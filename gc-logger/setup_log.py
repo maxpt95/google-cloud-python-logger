@@ -17,7 +17,7 @@ def setup_cloud_logging(logger: Logger):
     logger.addHandler(cloud_handler)
 
 
-def setup_logging(path="./logging.json", default_level=logging.DEBUG):
+def setup_logging(path="config/logging.json", default_level=logging.DEBUG):
     """Setup logging configuration"""
     if os.path.exists(path):
         with open(path, 'rt') as f:
