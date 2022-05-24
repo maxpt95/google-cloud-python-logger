@@ -20,4 +20,8 @@ logger.addHandler(cloud_handler)
 
 ## Test It Out!
 
-Log on Google Cloud by running the hello_world module or execute log_using_setup to see how you can log on console and on the cloud by previously configuring the logger
+Log on Google Cloud by running the hello_world module or execute log_using_setup to see how you can log on console and on the cloud by previously configuring the logger.
+
+## Log From a Cloud Run Service
+
+Check the main.py to see how you could implement a cloud logger from a Cloud Run service
