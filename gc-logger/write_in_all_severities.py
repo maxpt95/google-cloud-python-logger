@@ -9,7 +9,7 @@ setup_log.setup_cloud_logging(logger)
 
 
 def write() -> None:
-    logger.info("Writing in all lvls: ")
+    logger.info("Writing in all severities: ")
     logger.debug("This is DEBUG")
     logger.info("This is INFO")
     logger.warning("This is WARNING")
