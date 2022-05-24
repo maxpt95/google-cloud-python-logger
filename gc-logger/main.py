@@ -1,3 +1,4 @@
+"""API for testing cloud logging with a Cloud Run Service"""
 import logging
 import os
 
@@ -14,9 +15,8 @@ app = Flask(__name__)
 api = Api(app)
 
 logger = logging.getLogger(__name__)
+setup_log.setup_logging()
 setup_log.setup_cloud_logging(logger)
-
-
 # Pipeline request handlers
 class WriteContent(Resource):
 
@@ -53,6 +53,5 @@ api.add_resource(WriteContent, "/write-content")
 api.add_resource(WriteOnAllSeverities, "/write-on-all-severities")
 
 if __name__ == "__main__":
-    setup_log.setup_logging()
     app.run(debug=True, host="0.0.0.0",
             port=int(os.environ.get("PORT", 8080)))
